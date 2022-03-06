@@ -1,0 +1,288 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #c9c8ce;
+}
+
+.players{
+    display: flex;
+    position: absolute;
+    bottom: 85vh;
+    gap: 30px;
+    justify-content: center;
+
+}
+.players img{
+    width: 60px;
+}
+.player2{
+    color: gray;
+}
+.players div{
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    gap: 5px;
+}
+
+.table-container{
+    position: relative;
+    z-index: 1;
+    margin-top: 50px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    width: 150px;
+    height: 150px;
+    border: 5px solid black;
+
+}
+
+table tr:first-child td {
+    border-top: 0;
+}
+
+table tr td:first-child {
+    border-left: 0;
+}
+
+table tr:last-child td {
+    border-bottom: 0;
+}
+
+table tr td:last-child {
+    border-right: 0;
+}
+
+table tr td div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table tr td div img{
+    position: absolute;
+    display: none;
+    width: 80px;
+}
+
+table tr td:hover{
+    cursor: pointer;
+    background-color: rgba(13, 60, 131, 0.171);
+}
+.line{
+    width: 400px;
+    height: 15px;
+    position: absolute;
+    transform: scaleX(0);
+    transition: transform 225ms ease-in-out;
+    border-radius: 1px;
+}
+
+.line0{
+    top: 65px;
+    right: 35px;
+}
+.line1{
+    top: 225px;
+    right: 35px;
+}
+.line2{
+    bottom: 65px;
+    right: 35px;
+}
+.vertical{
+    transform: rotate(90deg) scaleX(0) ;
+}
+.line3{
+    top: 225px;
+    right: 190px;
+}
+.line4{
+    top: 225px;
+    right: 32px;
+}
+.line5{
+    top: 225px;
+    left: 190px;
+}
+.line6{
+    transform: rotate(45deg) scaleX(0);
+    top: 225px;
+    right: -18px;
+    width: 500px;
+}
+.line7{
+    transform: rotate(-45deg) scaleX(0);
+    width: 500px;
+    top: 225px;
+    left: -18px;
+}
+
+.game-over-container{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.938);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: transform 225ms ease-in-out;
+    z-index: 2;
+   
+
+}
+.game-over{
+    display: flex;
+    align-items: center;
+    font-size: 10rem;
+    gap: 2rem;
+    text-align: center;
+    
+}
+
+.restart-button{
+    
+    z-index: 5;
+    font-size: 40px;
+    background-color: #1C0B7F;
+    color: white;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 2rem;
+
+}
+
+@media(max-width:600px){
+    table tr td div img{
+        width: 60px;
+    }
+    .players{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .players img{
+        width: 40px;
+    }
+    
+    .restart-button{
+        font-size: 2rem;
+        
+    }
+    td {
+        width: 120px;
+        height: 120px;
+    }
+    .line{
+        width: 300px;
+    }
+    
+    .line0{
+        top: 52px;
+        right: 40px;
+    }
+    .line1{
+        top: 180px;
+        right: 40px;
+    }
+    .line2{
+        bottom: 52px;
+        right: 40px;
+    }
+   
+    .line3{
+        top: 180px;
+        right: 165px;
+    }
+    .line4{
+        top: 180px;
+        right: 38px;
+    }
+    .line5{
+        top: 180px;
+        left: 165px;
+    }
+    .line6{
+        width: 400px;
+        top: 180px;
+        right: -10px;
+    }
+    .line7{
+        width: 400px;
+        top: 180px;
+        left: -10px;
+    }
+    .game-over{
+        font-size: 7rem;
+        
+    }
+    .game-over img{
+        width: 100px;
+    }
+}
+@media(max-width: 400px) {
+    td {
+        width: 80px;
+        height: 80px;
+    }
+    .players{
+        flex-direction: column;
+        bottom: 75vh;
+        
+    }
+    .line{
+        width: 200px;
+    }
+    
+    .line0{
+        top: 33px;
+        right: 28px;
+    }
+    .line1{
+        top: 122px;
+        right: 28px;
+    }
+    .line2{
+        bottom: 33px;
+        right: 28px;
+    }
+   
+    .line3{
+        top: 120px;
+        right: 115px;
+    }
+    .line4{
+        top: 120px;
+        right: 28px;
+    }
+    .line5{
+        top: 120px;
+        left: 115px;
+    }
+    .line6{
+        width: 300px;
+        top: 120px;
+        right: -20px;
+    }
+    .line7{
+        width: 300px;
+        top: 120px;
+        left: -20px;
+    }
+    .game-over{
+        font-size: 5rem;
+        gap: 0;
+    }
+    .game-over img{
+        width: 80px;
+    }
+}

@@ -1,12 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TIcTacToe</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header class="players">
+      <div class="player1" id="player1">
+        <img src="./img/circle.png" alt="" />
+        <span>Player 1</span>
+      </div>
+      <div class="player2" id="player2">
+        <img src="./img/cross.png" alt="" />
+        <span>Player 2</span>
+      </div>
+    </header>
+
+    <div class="table-container">
+      <table>
+        <tr>
+          <td id="cell0" onclick="addToArray(0)">
+            <div>
+              <img id="circle-0" src="./img/circle.png" alt="" />
+              <img id="cross-0" src="./img/cross.png" alt="" />
+            </div>
+          </td>
+          <td id="cell1" onclick="addToArray(1)">
+            <div>
+              <img id="circle-1" src="./img/circle.png" alt="" />
+              <img id="cross-1" src="./img/cross.png" alt="" />
+            </div>
+          </td>
+          <td id="cell2" onclick="addToArray(2)">
+            <div>
+              <img id="circle-2" src="./img/circle.png" alt="" />
+              <img id="cross-2" src="./img/cross.png" alt="" />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td id="cell3" onclick="addToArray(3)">
+            <div>
+              <img id="circle-3" src="./img/circle.png" alt="" />
+              <img id="cross-3" src="./img/cross.png" alt="" />
+            </div>
+          </td>
+          <td id="cell4" onclick="addToArray(4)">
+            <div>
+              <img id="circle-4" src="./img/circle.png" alt="" />
+              <img id="cross-4" src="./img/cross.png" alt="" />
+            </div>
+          </td>
+          <td id="cell5" onclick="addToArray(5)">
+            <div>
+              <img id="circle-5" src="./img/circle.png" alt="" />
+              <img id="cross-5" src="./img/cross.png" alt="" />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td id="cell6" onclick="addToArray(6)">
+            <div>
+              <img id="circle-6" src="./img/circle.png" alt="" />
+              <img id="cross-6" src="./img/cross.png" alt="" />
+            </div>
+          </td>
+          <td id="cell7" onclick="addToArray(7)">
+            <div>
+              <img id="circle-7" src="./img/circle.png" alt="" />
+              <img id="cross-7" src="./img/cross.png" alt="" />
+            </div>
+          </td>
+          <td id="cell8" onclick="addToArray(8)">
+            <div>
+              <img id="circle-8" src="./img/circle.png" alt="" />
+              <img id="cross-8" src="./img/cross.png" alt="" />
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div id="line-0" class="line0 line"></div>
+      <div id="line-1" class="line1 line"></div>
+      <div id="line-2" class="line2 line"></div>
+      <div id="line-3" class="line3 line vertical"></div>
+      <div id="line-4" class="line4 line vertical"></div>
+      <div id="line-5" class="line5 line vertical"></div>
+      <div id="line-6" class="line6 line"></div>
+      <div id="line-7" class="line7 line"></div>
+    </div>
+    <div class="game-over-container" id="game-over">
+        <!-- <img class="game-over"  src="./img/game-over.png" alt=""> -->
+        <div class="game-over">
+            <img id="winner-img" src="" alt="">
+            <span id="winner-text">Wins</span>
+        </div>
+        <button class="restart-button" onclick="window.location.reload()">RESTART</button>
+    </div>
+  </body>
 </html>
